@@ -1,5 +1,5 @@
-# Setting the base to nodejs 8.0.0
-FROM node:8.0.0-slim
+# Setting the base to nodejs 8.1.0
+FROM node:8.1.0-slim
 
 # Maintainer
 MAINTAINER Geir Gåsodden
