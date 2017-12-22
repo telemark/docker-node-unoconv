@@ -1,15 +1,12 @@
-# Setting the base to nodejs 8.9.0
-FROM node:8.9.0-slim
-
-# Maintainer
-MAINTAINER Geir Gåsodden
+# Setting the base to nodejs 8.9.3
+FROM node:8.9.3-slim
 
 # Adds backports
 RUN awk '$1 ~ "^deb" { $3 = $3 "-backports"; print; exit }' /etc/apt/sources.list > /etc/apt/sources.list.d/backports.list
 
-# Installs git and unoconv
+# Installs git, unoconv and chinese fonts
 RUN apt-get update
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get -t jessie-backports install -y git unoconv && apt-get clean
+RUN DEBIAN_FRONTEND=noninteractive apt-get -t jessie-backports install -y git unoconv ttf-wqy-zenhei fonts-arphic-ukai fonts-arphic-uming && apt-get clean
 
 ENTRYPOINT /usr/bin/unoconv --listener --server=0.0.0.0 --port=2002
