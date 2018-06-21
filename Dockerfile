@@ -1,5 +1,5 @@
 # Setting the base to nodejs 8.11.1
-FROM node:8.11.3-slim@sha256:556271789f920bc0bf3d0906c33747e7397fda25d1ddd75d794f92c993ae3c2b
+FROM node:8.11.3-slim@sha256:55739838bbd1a7d66eb8d6446be2488564a2def8198642a919bac201b814cf28
 
 # Adds backports
 RUN awk '$1 ~ "^deb" { $3 = $3 "-backports"; print; exit }' /etc/apt/sources.list > /etc/apt/sources.list.d/backports.list
