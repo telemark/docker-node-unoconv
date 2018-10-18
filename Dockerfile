@@ -1,4 +1,4 @@
-FROM node:10.11.0-slim@sha256:14306ddcac608eb3e8359adecf0ecdfb2bf629e60e1bf4e096c6edb88f38c706
+FROM node:10.12.0-slim@sha256:62417b202fc4c8b9a8ef16e94b46a70ebb65b5adb57b581cd046b28bf747e7f3
 
 # Adds backports
 RUN awk '$1 ~ "^deb" { $3 = $3 "-backports"; print; exit }' /etc/apt/sources.list > /etc/apt/sources.list.d/backports.list
