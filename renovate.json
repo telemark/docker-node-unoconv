@@ -2,7 +2,11 @@
   "extends": [
     "config:base"
   ],
+  "devDependencies": {
+    "automerge": true
+  },
   "assignees": [
+    "maccyber",
     "zrrrzzt"
   ]
 }
