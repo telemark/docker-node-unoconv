@@ -10,6 +10,7 @@ RUN apt-get update && apt-get -t jessie-backports -y install \
     ttf-wqy-zenhei \
     fonts-arphic-ukai \
     fonts-arphic-uming \
+    fonts-indic \
 && rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT /usr/bin/unoconv --listener --server=0.0.0.0 --port=2002
