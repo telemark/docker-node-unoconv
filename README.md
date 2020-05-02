@@ -4,7 +4,7 @@ Docker base image with node and unoconv.
 
 ## Versions
 
-Node 10.20.1
+Node 12.16.3
 
 Unconv 0.7-1.1
 

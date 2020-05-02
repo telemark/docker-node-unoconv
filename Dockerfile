@@ -1,9 +1,5 @@
-FROM node:10.20.1-buster-slim
+FROM node:12.16.3-buster-slim
 
-# Adds backports
-#RUN awk '$1 ~ "^deb" { $3 = $3 "-backports"; print; exit }' /etc/apt/sources.list > /etc/apt/sources.list.d/backports.list
-#RUN deb http://deb.debian.org/debian jessie-backports main
-#RUN echo 'deb http://deb.debian.org/debian buster-backports main' > /etc/apt/sources.list.d/backports.list
 # Installs git, unoconv and chinese fonts
 RUN apt-get update && apt-get -y install \
     git \
