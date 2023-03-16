@@ -1,4 +1,4 @@
-FROM node:12.18.3-buster-slim
+FROM node:14.21.3-buster-slim
 
 # Installs git, unoconv and chinese fonts
 RUN apt-get update && apt-get -y install \
